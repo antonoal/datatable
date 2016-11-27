@@ -1,0 +1,17 @@
+* Conversation with Wynand about datatable
+
+Wynand Jordaan:
+	Been doing a comparison between python pandas, ibis, spark df, f# deedle and i think the syntax looks really good in comparison
+	Ok with me. Let me know if you need a hand
+Alexandr Antonov:
+	Sure :)
+Wynand Jordaan:
+	Maybe make it work on *onyx-platform* rather than spark
+Alexandr Antonov:
+	I want to decouple it completely if any platform alike we did with impala
+Wynand Jordaan:
+	Yep the guy from *ibis* seemed to have exactly the same strategy. You define df and then call compile on it and it emits sql
+
+* Another idea from Wynand about window funcs
+
+I's a good idea to try ditch (window) as a starting point as it should be derived implicitely by group-by, order-by and aggregate funcs that we are running a window function depending on where we are in the query.
